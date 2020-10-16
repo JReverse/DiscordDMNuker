@@ -13,6 +13,7 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 - Deletes ALL Dms from a specific user
 - Extended Logging
 - Async
+- Token Support
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
