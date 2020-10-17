@@ -33,26 +33,33 @@ namespace DiscordDMNuker
         {
             await Task.Run(async () =>
            {
-               Status.SafeChangeText("Starting");
 
-               DiscordClient client = new DiscordClient(Token);
-               Logs.SafeAddItem(string.Format("Logged In To: {0}", client.User.Username));
-               var User = await client.GetProfileAsync(UserId);
-               var channelid = await client.CreateDMAsync(UserId);
-               Logs.SafeAddItem(string.Format("Created Dms With: {0}", User.User.Username));
-               var msg = await client.GetChannelMessagesAsync(channelid.Id);
-               Status.SafeChangeText("In Progress....");
-               foreach (DiscordMessage message in msg)
+               try
                {
-                   if (message.Author.User.Id == client.User.Id)
-                   {
-                       await message.DeleteAsync();
-                       Logs.SafeAddItem(string.Format("Deleted Message: {0}", message.Content));
-                       await Task.Delay(Delay);
-                   }
-               }
+                   Status.SafeChangeText("Starting");
 
-               Status.SafeChangeText("Completed");
+                   DiscordClient client = new DiscordClient(Token);
+                   Logs.SafeAddItem(string.Format("Logged In To: {0}", client.User.Username));
+                   var User = await client.GetProfileAsync(UserId);
+                   var channelid = await client.CreateDMAsync(UserId);
+                   Logs.SafeAddItem(string.Format("Created Dms With: {0}", User.User.Username));
+                   var msg = await client.GetChannelMessagesAsync(channelid.Id);
+                   Status.SafeChangeText("In Progress....");
+                   foreach (DiscordMessage message in msg)
+                   {
+                       if (message.Author.User.Id == client.User.Id)
+                       {
+                           if (message.Type != MessageType.Call) {
+                               await message.DeleteAsync();
+                               Logs.SafeAddItem(string.Format("Deleted Message: {0}", message.Content));
+                               await Task.Delay(Delay);
+                           }
+                       }
+                   }
+                   Status.SafeChangeText("Completed");
+               } catch (Exception) {
+                   await Task.Delay(Delay);
+               }
            });
         }
 
