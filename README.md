@@ -8,6 +8,8 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 
 # Some features i plan to add
 - Login Support
+- Save Images / Videos
+- Save Logs Of messages
 
 # Current Features
 - Deletes ALL Dms from a specific user
