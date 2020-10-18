@@ -8,14 +8,14 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 
 # Some features i plan to add
 - Login Support
-- Save Images / Videos
-- Save Logs Of messages
 
 # Current Features
 - Deletes ALL Dms from a specific user
 - Extended Logging
 - Async
 - Token Support
+- Save Images / Videos
+- Save Logs Of messages
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -23,6 +23,8 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 - Token Support [✔️]
 - Async [✔️]
 - Latest Discord API [✔️]
+- Save Images / Videos [✔️]
+- Save Logs Of messages [✔️]
 - Login Support [❌]
 
 # Credits
