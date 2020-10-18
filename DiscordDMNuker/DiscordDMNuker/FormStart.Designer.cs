@@ -36,6 +36,9 @@ namespace DiscordDMNuker
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@ namespace DiscordDMNuker
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 161);
+            this.button1.Location = new System.Drawing.Point(10, 259);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(288, 46);
@@ -112,11 +115,44 @@ namespace DiscordDMNuker
             this.label3.Text = "Delay (IN MS)";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 144);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(163, 24);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Save Images/Vids";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(16, 187);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(148, 24);
+            this.checkBox2.TabIndex = 22;
+            this.checkBox2.Text = "Save Messages";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(16, 230);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(159, 24);
+            this.checkBox3.TabIndex = 23;
+            this.checkBox3.Text = "Delete Messages";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 218);
+            this.ClientSize = new System.Drawing.Size(316, 316);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button1);
@@ -126,6 +162,7 @@ namespace DiscordDMNuker
             this.Controls.Add(this.label2);
             this.Name = "FormStart";
             this.Text = "FormStart";
+            this.Load += new System.EventHandler(this.FormStart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,5 +178,8 @@ namespace DiscordDMNuker
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

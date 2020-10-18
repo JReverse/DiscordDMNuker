@@ -16,6 +16,9 @@ namespace DiscordDMNuker
         public ulong UserId;
         public string Token;
         public int Delay;
+        public bool SavePicsNVids;
+        public bool SaveMessages;
+        public bool Delete;
         public FormStart()
         {
             InitializeComponent();
@@ -32,7 +35,15 @@ namespace DiscordDMNuker
             Delay = (int)numericUpDown1.Value;
             UserId = Convert.ToUInt64(textBox1.Text.Trim());
             Token = textBox2.Text.Trim();
+            SavePicsNVids = checkBox1.Checked;
+            SaveMessages = checkBox2.Checked;
+            Delete = checkBox3.Checked;
             this.Close();
+        }
+
+        private void FormStart_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
