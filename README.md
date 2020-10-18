@@ -23,6 +23,8 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 - Token Support [✔️]
 - Async [✔️]
 - Latest Discord API [✔️]
+- Save Images / Videos [✔️]
+- Save Logs Of messages [✔️]
 - Login Support [❌]
 
 # Credits
