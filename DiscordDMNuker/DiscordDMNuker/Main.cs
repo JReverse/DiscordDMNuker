@@ -50,12 +50,12 @@ namespace DiscordDMNuker
                    Status.SafeChangeText("Starting");
                    DiscordClient client = new DiscordClient(Token);
                    Logs.SafeAddItem(string.Format("Logged In To: {0}", client.User.Username));
-                   var User = await client.GetProfileAsync(UserId);
+                   var User = await client.GetUserAsync(UserId);
                    var channelid = await client.CreateDMAsync(UserId);
-                   Logs.SafeAddItem(string.Format("Created Dms With: {0}", User.User.Username));
+                   Logs.SafeAddItem(string.Format("Created Dms With: {0}", User.Username));
                    var msg = await client.GetChannelMessagesAsync(channelid.Id);
                    Status.SafeChangeText("In Progress....");
-                   var Convo = "SavedConvos/" + User.User.Username + rnd.Next(1, 999999999) + ".txt";
+                   var Convo = "SavedConvos/" + User.Username + rnd.Next(1, 999999999) + ".txt";
                    foreach (DiscordMessage message in msg)
                    {
                        if (savemessages)
