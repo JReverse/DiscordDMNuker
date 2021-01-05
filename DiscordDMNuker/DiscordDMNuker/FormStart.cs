@@ -19,6 +19,7 @@ namespace DiscordDMNuker
         public bool SavePicsNVids;
         public bool SaveMessages;
         public bool Delete;
+        public bool IsGroupChat;
         public FormStart()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace DiscordDMNuker
             SavePicsNVids = checkBox1.Checked;
             SaveMessages = checkBox2.Checked;
             Delete = checkBox3.Checked;
+            IsGroupChat = checkBox4.Checked;
             this.Close();
         }
 
