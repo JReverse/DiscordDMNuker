@@ -16,6 +16,7 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 - Token Support
 - Save Images / Videos
 - Save Logs Of messages
+- Group Chat Support
 
 # Devolepment roadmap [❌] = In progress [✔️] = Done
 - UI [✔️]
@@ -25,6 +26,7 @@ DiscordDMNuker is powered by Anarchy This means for some reason if that gets pat
 - Latest Discord API [✔️]
 - Save Images / Videos [✔️]
 - Save Logs Of messages [✔️]
+- Group Chat Support [✔️]
 - Login Support [❌]
 
 # Credits

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Anarchy">
-      <HintPath>..\..\..\..\..\Downloads\Anarchy-master\Anarchy-master\Anarchy\bin\Debug\Anarchy.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Anarchy-master\Anarchy\bin\Debug\Anarchy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
